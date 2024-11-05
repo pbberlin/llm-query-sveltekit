@@ -5,6 +5,21 @@
 
 
     let modelsVal = [ "gpt-4o", "gpt-4" ];
+    let promptMsgA = `Who was Sheakespeare?
+        Was he a noble man from the court?
+        Use the following json format for your response:
+
+        {{
+            "agreement":        "<agrees/disagrees/neutral>",
+            "alignment":         <percentage_score>
+            "textual_analysis":  <text>
+        }}
+
+
+    `;
+
+
+
 </script>
 
 
@@ -19,7 +34,7 @@
 <Example />
 
 
-<ChatCompletion 
-    promptMsg="Something weird. But answer in json format."
+<ChatCompletion
+    promptMsg={promptMsgA}
     models={modelsVal}
 />
