@@ -1,8 +1,7 @@
 <script>
-	import App     from '../App.svelte';
-    import Example from "$lib/components/example.svelte";
+	import App            from '../App.svelte';
+    import Example        from "$lib/components/example.svelte";
     import ChatCompletion from "$lib/components/chat-completion.svelte";
-
 
     let modelsVal = [ "gpt-4o", "gpt-4" ];
     let promptMsgA = `Who was Sheakespeare?
@@ -14,25 +13,18 @@
             "alignment":         <percentage_score>
             "textual_analysis":  <text>
         }}
-
-
     `;
-
-
 
 </script>
 
 
-<h3>Welcome to SvelteKit</h3>
+<h3>SvelteKit components</h3>
 
 <p>we are in +page.svelte </p>
 
-
 <App />
 
-
 <Example />
-
 
 <ChatCompletion
     promptMsg={promptMsgA}
