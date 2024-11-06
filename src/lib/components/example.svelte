@@ -1,5 +1,5 @@
 <script>
-    export let message = "Here is component 'Example.svelte'";
+	let { message = "Here is component 'Example.svelte'" } = $props();
 </script>
 
 <p>

@@ -2,8 +2,17 @@
 
     import { onMount } from 'svelte';
 
-    export let promptMsg: string;
-    export let models:    string[];
+    // export let promptMsg: string;
+    // export let models:    string[];
+
+    interface PropTypes {
+        promptMsg: string;
+        models:    string[];
+	}
+
+    let { promptMsg , models } = $props() as PropTypes;
+
+
 
     const endPoint = `http://localhost:8001/chat-completion-json`;
 
@@ -74,8 +83,10 @@
 
 
 
-    let results :responseOuterT[] = [];
-    results.push(dummyRespOuter("id-22"))
+    // let results :responseOuterT[] = [];
+    let results :responseOuterT[] = $state([]);
+
+    // results.push(dummyRespOuter("id-22"))
 
 
     // fetch data for a single model

@@ -1,5 +1,5 @@
 <script>
-	let extension = 'svelte';
+	let { extension = 'svelte (default val)' } = $props();
 </script>
 
 
